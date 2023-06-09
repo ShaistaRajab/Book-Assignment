@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>         /*task 01: */
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      
+      .gallery img {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        cursor: pointer;
+      }
+      
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+      
+      .modal-content {
+        display: block;
+        margin: auto;
+        max-width: 800px;
+        max-height: 600px;
+      }
+      
+      .close {
+        color: white;
+        position: absolute;
+        top: 15px;
+        right: 25px;
+        font-size: 35px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      </style>
+
+      <style>  /*task 2*/
+        #my-paragraph {
+          font-size: 16px;
+        }
+      </style>
+    
+</head>
+<body>
+
+    <div class="gallery">  <!--task 01:-->
+        <img src="https://i.pinimg.com/474x/cc/e0/78/cce078329ede2e53f7dde2d205e93c79.jpg" onclick="openModal(this)" alt="Image 1">
+        <img src="https://images.unsplash.com/photo-1516617442634-75371039cb3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGhvdG9zaG9wJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80" onclick="openModal(this)" alt="Image 2">
+        <img src="https://images.unsplash.com/photo-1483232539664-d89822fb5d3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDE1fHx8ZW58MHx8fHx8&w=1000&q=80" onclick="openModal(this)" alt="Image 3">
+        <img src="https://images.unsplash.com/photo-1619964478337-12e178409359?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bmF0dXJhbCUyMGJsdXJ8ZW58MHx8MHx8fDA%3D&w=1000&q=80" onclick="openModal(this)" alt="Image 4">
+      </div>
+       <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content">
+      </div>
+
+      <p id="my-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>  <!--task 02:-->
+  
+      <button id="zoom-in-btn">Zoom In (+)</button>
+      <button id="zoom-out-btn">Zoom Out (-)</button>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
